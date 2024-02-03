@@ -7,6 +7,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.module.annotations.ReactModule;
+import encoder.*;
 
 @ReactModule(name = TestLibModule.NAME)
 public class TestLibModule extends ReactContextBaseJavaModule {
@@ -22,16 +23,18 @@ public class TestLibModule extends ReactContextBaseJavaModule {
     return NAME;
   }
 
-  static {
-    System.loadLibrary("test-lib");
-  }
+  // static {
+  //   System.loadLibrary("test-lib");
+  // }
 
-  private static native double nativeMultiply(double a, double b);
+  // private static native double nativeMultiply(double a, double b);
 
   // Example method
   // See https://reactnative.dev/docs/native-modules-android
   @ReactMethod
   public void multiply(double a, double b, Promise promise) {
-    promise.resolve(nativeMultiply(a, b));
+        byte[] dodo = Encoder.encode("something");
+        String back = Encoder.decode(dodo);
+        promise.resolve(back);
   }
 }
