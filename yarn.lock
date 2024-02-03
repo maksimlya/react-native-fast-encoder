@@ -10478,9 +10478,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-fast-openpgp-example@workspace:example":
+"react-native-fast-encoder-example@workspace:example":
   version: 0.0.0-use.local
-  resolution: "react-native-fast-openpgp-example@workspace:example"
+  resolution: "react-native-fast-encoder-example@workspace:example"
   dependencies:
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
@@ -10495,9 +10495,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"react-native-fast-openpgp@workspace:.":
+"react-native-fast-encoder@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-native-fast-openpgp@workspace:."
+  resolution: "react-native-fast-encoder@workspace:."
   dependencies:
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0

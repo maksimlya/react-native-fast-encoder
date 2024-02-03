@@ -20,7 +20,7 @@ import EncryptDecryptSymmetricFile from './modules/EncryptDecryptSymmetricFile';
 import SignVerifyFile from './modules/SignVerifyFile';
 import Metadata from './modules/Metadata';
 import Convert from './modules/Convert';
-import OpenPGP from 'react-native-fast-openpgp';
+import OpenPGP from 'react-native-fast-encoder';
 
 const passphrase = 'test';
 const privateKey = `-----BEGIN PGP PRIVATE KEY BLOCK-----

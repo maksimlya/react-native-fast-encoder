@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "react-native-fast-openpgp": ["./src/index"]
+      "react-native-fast-encoder": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

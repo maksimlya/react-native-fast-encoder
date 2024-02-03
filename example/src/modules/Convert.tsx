@@ -1,6 +1,6 @@
 import {Button} from "react-native";
 import React, {useState} from "react";
-import OpenPGP from 'react-native-fast-openpgp';
+import OpenPGP from 'react-native-fast-encoder';
 import SectionContainer from "../components/SectionContainer";
 import SectionTitle from "../components/SectionTitle";
 import SectionResult from "../components/SectionResult";

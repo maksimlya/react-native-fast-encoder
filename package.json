@@ -1,7 +1,7 @@
 {
-  "name": "react-native-fast-openpgp",
-  "version": "2.7.2",
-  "description": "library for use openPGP",
+  "name": "react-native-fast-encoder",
+  "version": "0.1.0",
+  "description": "test library for fast encode/decode",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace react-native-fast-openpgp-example",
+    "example": "yarn workspace react-native-fast-encoder-example",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
     "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
@@ -38,13 +38,13 @@
     "ios",
     "android"
   ],
-  "repository": "https://github.com/jerson/react-native-fast-openpgp",
+  "repository": "https://github.com/maksimlya/react-native-fast-text-encoder",
   "author": "Gerson Alexander Pardo Gamez <jeral17@gmail.com> (https://github.com/jerson)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jerson/react-native-fast-openpgp/issues"
+    "url": "https://github.com/maksimlya/react-native-fast-text-encoder/issues"
   },
-  "homepage": "https://github.com/jerson/react-native-fast-openpgp#readme",
+  "homepage": "https://github.com/maksimlya/react-native-fast-text-encoder#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
