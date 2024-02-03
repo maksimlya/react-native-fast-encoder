@@ -25,8 +25,8 @@ import { GetPrivateKeyMetadataRequest } from './model/get-private-key-metadata-r
 import { ConvertPrivateKeyToPublicKeyRequest } from './model/convert-private-key-to-public-key-request';
 import './shim';
 
-const FastOpenPGPNativeModules = (NativeModules as NativeModulesDef)
-  .FastOpenpgp;
+const FastEncoderNativeModules = (NativeModules as NativeModulesDef)
+  .FastEncoder;
 
 export enum Algorithm {
   RSA = 0,
@@ -208,7 +208,7 @@ export default class OpenPGP {
   static useJSI = false;
 
   private static loaded = false;
-  private static TAG = '[FastOpenPGP]';
+  private static TAG = '[FastEncoder]';
 
   static async decrypt(
     message: string,
@@ -636,7 +636,7 @@ export default class OpenPGP {
       let result: BridgeResponse;
       if (this.useJSI) {
         if (!this.loaded) {
-          this.loaded = FastOpenPGPNativeModules.install();
+          this.loaded = FastEncoderNativeModules.install();
           console.log(
             this.TAG,
             `(${name})`,
@@ -650,7 +650,7 @@ export default class OpenPGP {
             bytes.byteLength + bytes.byteOffset
           );
 
-          result = await global.FastOpenPGPCallPromise(name, buff);
+          result = await global.FastEncoderCallPromise(name, buff);
           if (typeof result === 'string') {
             throw new Error(result);
           }
@@ -660,13 +660,13 @@ export default class OpenPGP {
             `(${name})`,
             'cant use JSI in debug mode, fallback to NativeModules'
           );
-          result = await FastOpenPGPNativeModules.callJSI(
+          result = await FastEncoderNativeModules.callJSI(
             name,
             Array.from(bytes)
           );
         }
       } else {
-        result = await FastOpenPGPNativeModules.call(name, Array.from(bytes));
+        result = await FastEncoderNativeModules.call(name, Array.from(bytes));
       }
 
       return this._responseBuffer(result);

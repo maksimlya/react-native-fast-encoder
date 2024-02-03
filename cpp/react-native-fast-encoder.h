@@ -6,7 +6,7 @@
 
 using namespace facebook;
 
-namespace fastOpenPGP {
+namespace fastEncoder {
     void install(facebook::jsi::Runtime &jsiRuntime);
 
     void cleanup();

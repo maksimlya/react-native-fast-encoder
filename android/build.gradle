@@ -1,5 +1,5 @@
 buildscript {
-  def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['FastOpenpgp_kotlinVersion']
+  def kotlin_version = rootProject.ext.has('kotlinVersion') ? rootProject.ext.get('kotlinVersion') : project.properties['FastEncoder_kotlinVersion']
 
   repositories {
     google()
@@ -27,11 +27,11 @@ if (isNewArchitectureEnabled()) {
 }
 
 def getExtOrDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["FastOpenpgp_" + name]
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : project.properties["FastEncoder_" + name]
 }
 
 def getExtOrIntegerDefault(name) {
-  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["FastOpenpgp_" + name]).toInteger()
+  return rootProject.ext.has(name) ? rootProject.ext.get(name) : (project.properties["FastEncoder_" + name]).toInteger()
 }
 
 def supportsNamespace() {
@@ -49,7 +49,7 @@ def supportsNamespace() {
 
 android {
   if (supportsNamespace()) {
-    namespace "com.fastopenpgp"
+    namespace "com.fastencoder"
 
     sourceSets {
       main {

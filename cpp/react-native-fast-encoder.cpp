@@ -1,5 +1,5 @@
-#import "react-native-fast-openpgp.h"
-#include "libopenpgp_bridge.h"
+#import "react-native-fast-encoder.h"
+#include "libencoder_bridge.h"
 
 #include <iostream>
 #include <sstream>
@@ -10,7 +10,7 @@
 
 using namespace facebook;
 
-namespace fastOpenPGP {
+namespace fastEncoder {
     jsi::Value call(jsi::Runtime &runtime, const jsi::String &nameValue,
                     const jsi::Object &payloadObject) {
         auto nameString = nameValue.utf8(runtime);
@@ -46,7 +46,7 @@ namespace fastOpenPGP {
 
     void install(jsi::Runtime &jsiRuntime) {
 
-        std::cout << "Initializing react-native-fast-openpgp" << "\n";
+        std::cout << "Initializing react-native-fast-encoder" << "\n";
 
         auto bridgeCallSync = jsi::Function::createFromHostFunction(
                 jsiRuntime,
@@ -156,10 +156,10 @@ namespace fastOpenPGP {
 //        auto object = jsi::Object(jsiRuntime);
 //        object.setProperty(jsiRuntime, "callPromise", std::move(bridgeCallPromise));
 //        object.setProperty(jsiRuntime, "callSync", std::move(bridgeCallSync));
-//        jsiRuntime.global().setProperty(jsiRuntime, "FastOpenPGP", std::move(object));
-        jsiRuntime.global().setProperty(jsiRuntime, "FastOpenPGPCallPromise",
+//        jsiRuntime.global().setProperty(jsiRuntime, "FastEncoder", std::move(object));
+        jsiRuntime.global().setProperty(jsiRuntime, "FastEncoderCallPromise",
                                         std::move(bridgeCallPromise));
-        jsiRuntime.global().setProperty(jsiRuntime, "FastOpenPGPCallSync",
+        jsiRuntime.global().setProperty(jsiRuntime, "FastEncoderCallSync",
                                         std::move(bridgeCallSync));
 
     }

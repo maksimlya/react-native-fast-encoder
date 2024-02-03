@@ -73,9 +73,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.fastopenpgpexample"
+    namespace "com.fastencoderexample"
     defaultConfig {
-        applicationId "com.fastopenpgpexample"
+        applicationId "com.fastencoderexample"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

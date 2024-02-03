@@ -1,4 +1,4 @@
-package com.fastopenpgpexample;
+package com.fastencoderexample;
 
 import android.app.Application;
 import com.facebook.react.PackageList;

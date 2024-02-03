@@ -1,13 +1,13 @@
-package com.fastopenpgp
+package com.fastencoder
 
 import android.util.Log
 import androidx.annotation.NonNull
 import com.facebook.react.bridge.*
 
-internal class FastOpenpgpModule(reactContext: ReactApplicationContext) :
+internal class FastEncoderModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
-  val TAG = "[FastOpenPGPModule]"
+  val TAG = "[FastEncoderModule]"
 
   external fun initialize(jsiPtr: Long);
   external fun destruct();
@@ -16,7 +16,7 @@ internal class FastOpenpgpModule(reactContext: ReactApplicationContext) :
 
   companion object {
     init {
-      System.loadLibrary("fast-openpgp")
+      System.loadLibrary("fast-encoder")
     }
   }
 
@@ -80,7 +80,7 @@ internal class FastOpenpgpModule(reactContext: ReactApplicationContext) :
   }
 
   override fun getName(): String {
-    return "FastOpenpgp"
+    return "FastEncoder"
   }
 
   override fun onCatalystInstanceDestroy() {
