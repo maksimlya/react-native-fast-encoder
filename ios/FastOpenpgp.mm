@@ -20,7 +20,7 @@ RCT_REMAP_METHOD(call,call:(nonnull NSString*)name withPayload:(nonnull NSArray*
     }];
 
     char *cname= strdup([name UTF8String]);
-    auto response = OpenPGPBridgeCall(cname, bytesCopy, (int)payload.count);
+    auto response = EncoderBridgeCall(cname, bytesCopy, (int)payload.count);
     free(bytesCopy);
     free(cname);
 

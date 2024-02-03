@@ -96,7 +96,7 @@ android {
   }
 
   packagingOptions {
-      pickFirst "**/libopenpgp_bridge.so"
+      pickFirst "**/libencoder_bridge.so"
   }
 }
 

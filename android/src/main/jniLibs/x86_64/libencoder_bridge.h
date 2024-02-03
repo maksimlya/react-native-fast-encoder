@@ -19,10 +19,9 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 /* Start of preamble from import "C" comments.  */
 
 
-#line 3 "main.go"
+#line 2 "main.go"
 #include <stdint.h>
 #include <stdlib.h>
-typedef struct  { void* message; int size; char* error; } BytesReturn;
 
 #line 1 "cgo-generated-wrapper"
 
@@ -80,7 +79,8 @@ typedef struct { void *data; GoInt len; GoInt cap; } GoSlice;
 extern "C" {
 #endif
 
-extern BytesReturn* OpenPGPBridgeCall(char* name, void* payload, int payloadSize);
+extern GoString Encode(char* message);
+extern GoString Decode(GoSlice encoded);
 
 #ifdef __cplusplus
 }

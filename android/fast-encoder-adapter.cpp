@@ -27,23 +27,23 @@ Java_com_fastencoder_FastEncoderModule_callNative(JNIEnv *env, jobject thiz,
     auto size = env->GetArrayLength(payload);
 
     auto nameChar = const_cast<char *>(nameConstChar);
-    auto response = OpenPGPBridgeCall(nameChar, payloadBytes, size);
+    auto response = Encode(nameChar);
 
     env->ReleaseStringUTFChars(name, nameConstChar);
     env->ReleaseByteArrayElements(payload, payloadBytes, 0);
 
-    if (response->error != nullptr) {
-        auto error = response->error;
-        free(response);
-        jclass Exception = env->FindClass("java/lang/Exception");
-        env->ThrowNew(Exception, error);
-        return nullptr;
-    }
-
-    auto result = env->NewByteArray(response->size);
-    env->SetByteArrayRegion(result, 0, response->size, (jbyte*) response->message);
-    free(response);
-    return result;
+    // if (response->error != nullptr) {
+    //     auto error = response->error;
+    //     free(response);
+    //     jclass Exception = env->FindClass("java/lang/Exception");
+    //     env->ThrowNew(Exception, error);
+    //     return nullptr;
+    // }
+    return env->NewByteArray(10);
+    // auto result = env->NewByteArray(response->len);
+    // env->SetByteArrayRegion(result, 0, response->len, (jbyte*) response->data);
+    // free(response);
+    // return result;
 }
 
 

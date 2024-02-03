@@ -22,30 +22,35 @@ internal class FastEncoderModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod
   fun callJSI(name: String, payload: ReadableArray, promise: Promise) {
-    Thread {
-      reactApplicationContext.runOnJSQueueThread {
-        try {
-          val contextHolder = this.reactApplicationContext.javaScriptContextHolder!!.get()
-          if (contextHolder.toInt() == 0) {
-            call(name, payload, promise)
-            return@runOnJSQueueThread
-          }
-          val bytes = ByteArray(payload.size()) { pos -> payload.getInt(pos).toByte() }
-          val result = callJSI(contextHolder, name, bytes)
-          val resultList = Arguments.createArray()
-          for (i in result.indices) {
-            resultList.pushInt(result[i].toInt())
-          }
-          promise.resolve(resultList)
-        } catch (e: Exception) {
-          promise.reject(e)
-        }
-      }
-    }.start()
+    Log.d(TAG, "callJSI")
+//    Thread {
+//      reactApplicationContext.runOnJSQueueThread {
+//        try {
+//          val contextHolder = this.reactApplicationContext.javaScriptContextHolder!!.get()
+//          if (contextHolder.toInt() == 0) {
+//            call(name, payload, promise)
+//            return@runOnJSQueueThread
+//          }
+//          Log.d(TAG, "before")
+//          val bytes = ByteArray(payload.size()) { pos -> payload.getInt(pos).toByte() }
+//          val result = callJSI(contextHolder, name, bytes)
+//          Log.d(TAG, "after")
+//          val resultList = Arguments.createArray()
+//          for (i in result.indices) {
+//            resultList.pushInt(result[i].toInt())
+//          }
+//          promise.resolve(resultList)
+//        } catch (e: Exception) {
+//          Log.d(TAG, "rejection")
+//          promise.reject(e)
+//        }
+//      }
+//    }.start()
   }
 
   @ReactMethod
   fun call(name: String, payload: ReadableArray, promise: Promise) {
+    Log.d(TAG, "call")
     Thread {
       try {
         val bytes = ByteArray(payload.size()) { pos -> payload.getInt(pos).toByte() }
@@ -63,7 +68,7 @@ internal class FastEncoderModule(reactContext: ReactApplicationContext) :
 
   @ReactMethod(isBlockingSynchronousMethod = true)
   fun install(): Boolean {
-    Log.d(TAG, "installing")
+    Log.d(TAG, "installing2")
     try {
       val contextHolder = this.reactApplicationContext.javaScriptContextHolder!!.get()
       if (contextHolder.toInt() == 0) {

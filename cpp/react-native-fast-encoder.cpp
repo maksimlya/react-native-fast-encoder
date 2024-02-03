@@ -20,28 +20,34 @@ namespace fastEncoder {
         auto payload = payloadObject.getArrayBuffer(runtime);
         auto size = (int) (payload.length(runtime));
         auto data = payload.data(runtime);
+        std::cout << "Before Encode" << "\n";
+        auto response = Encode(name);
 
-        auto response = OpenPGPBridgeCall(name, data, size);
+        std::cout << "After Encode" << "\n";
 
-        if (response->error != nullptr) {
-            auto error = response->error;
-            free(response);
-            return jsi::Value(jsi::String::createFromAscii(runtime, error));
-        }
+        // if (response->error != nullptr) {
+        //     auto error = response->error;
+        //     free(response);
+        //     return jsi::Value(jsi::String::createFromAscii(runtime, error));
+        // }
 
         auto arrayBuffer = runtime.global().getPropertyAsFunction(
                 runtime,
                 "ArrayBuffer"
         );
-        jsi::Object result = arrayBuffer.callAsConstructor(
-                runtime,
-                response->size
-        ).getObject(runtime);
-        jsi::ArrayBuffer buf = result.getArrayBuffer(runtime);
-        memcpy(buf.data(runtime), response->message, response->size);
-        free(response);
+        return jsi::Value(jsi::String::createFromAscii(runtime, "error"));
+        // jsi::String result = response;
 
-        return result;
+        // jsi::Object result = response;
+        // arrayBuffer.callAsConstructor(
+        //         runtime,
+        //         response->len
+        // ).getObject(runtime);
+        // jsi::ArrayBuffer buf = result.getArrayBuffer(runtime);
+        // memcpy(buf.data(runtime), response->data, response->len);
+        // free(response);
+
+        // return result;
     }
 
     void install(jsi::Runtime &jsiRuntime) {

@@ -293,8 +293,13 @@ export default class OpenPGP {
     const offset = EncryptRequest.endEncryptRequest(builder);
     builder.finish(offset);
 
-    const result = await this.call('encrypt', builder.asUint8Array());
-    return this._stringResponse(result);
+    try {
+      const result = await this.call('encrypt', builder.asUint8Array());
+      return this._stringResponse(result);
+    } catch(err) {
+      console.log(err);
+      return '';
+    } 
   }
 
   static async encryptFile(

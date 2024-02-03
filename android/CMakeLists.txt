@@ -12,7 +12,7 @@ file(TO_CMAKE_PATH ${NODE_MODULES_DIR} NODE_MODULES_DIR)
 
 set_target_properties(encoder_bridge
         PROPERTIES
-        IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libopenpgp_bridge.so
+        IMPORTED_LOCATION ${CMAKE_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}/libencoder_bridge.so
         )
 
 add_library(fast-encoder
