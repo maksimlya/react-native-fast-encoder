@@ -1,7 +1,7 @@
 {
-  "name": "test-lib",
-  "version": "0.1.0",
-  "description": "test",
+  "name": "react-native-fast-openpgp",
+  "version": "2.7.2",
+  "description": "library for use openPGP",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/src/index.d.ts",
@@ -26,7 +26,7 @@
     "!**/.*"
   ],
   "scripts": {
-    "example": "yarn workspace test-lib-example",
+    "example": "yarn workspace react-native-fast-openpgp-example",
     "test": "jest",
     "typecheck": "tsc --noEmit",
     "lint": "eslint \"**/*.{js,ts,tsx}\"",
@@ -39,16 +39,13 @@
     "ios",
     "android"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maksimlya/test-lib.git"
-  },
-  "author": "Maksim L <maksimlya@gmail.com> (https://github.com/maksimlya)",
+  "repository": "https://github.com/jerson/react-native-fast-openpgp",
+  "author": "Gerson Alexander Pardo Gamez <jeral17@gmail.com> (https://github.com/jerson)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/maksimlya/test-lib/issues"
+    "url": "https://github.com/jerson/react-native-fast-openpgp/issues"
   },
-  "homepage": "https://github.com/maksimlya/test-lib#readme",
+  "homepage": "https://github.com/jerson/react-native-fast-openpgp#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
@@ -69,7 +66,7 @@
     "pod-install": "^0.1.0",
     "prettier": "^2.0.5",
     "react": "18.2.0",
-    "react-native": "0.73.3",
+    "react-native": "0.72.6",
     "react-native-builder-bob": "^0.20.0",
     "release-it": "^15.0.0",
     "turbo": "^1.10.7",
@@ -139,7 +136,11 @@
   },
   "eslintIgnore": [
     "node_modules/",
-    "lib/"
+    "lib/",
+    "src/flatbuffers/",
+    "src/model/",
+    "src/shim.tsx",
+    "example/"
   ],
   "prettier": {
     "quoteProps": "consistent",
@@ -161,5 +162,9 @@
         }
       ]
     ]
+  },
+  "dependencies": {
+    "big-integer": "^1.6.51",
+    "flatbuffers": "2.0.6"
   }
 }
