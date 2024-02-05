@@ -55,22 +55,12 @@ interface NativeModulesDef {
 
 interface Global {
   BigInt: any;
-  // for now we are not going to use this way because of hermes on release mode only
-  // FastEncoder:FastEncoderJSI
-  /**
-   * this method use `JSI`, but will return a `Promise` in order to use an async way,
-   * at this moment is no real Async but in the future will be.
-   * TODO: implement real promise here
-   */
-  FastEncoderCallPromise(
-    name: string,
-    payload: ArrayBuffer
-  ): Promise<BridgeResponseJSI>;
   /**
    * this method use `JSI`, and will use in a Sync way,
    * be careful if the method that you are using is a complex one like generate a new Key
    */
-  FastEncoderCallSync(name: string, payload: ArrayBuffer): BridgeResponseJSI;
+  FastEncoderCallSync(name: string, payload: string): BridgeResponseJSI;
+  FastEncoderCallSync(name: string, payload: number[]): BridgeResponseJSI;
 }
 
 declare const global: Global;

@@ -1,19 +1,18 @@
 import {Colors} from "react-native/Libraries/NewAppScreen";
 import {Button, TextInput} from "react-native";
 import React, {useState} from "react";
-import OpenPGP from 'react-native-fast-encoder';
+import Encoder from 'react-native-fast-encoder';
 import SectionContainer from "../components/SectionContainer";
 import SectionTitle from "../components/SectionTitle";
 import SectionResult from "../components/SectionResult";
 import Container from "../components/Container";
 
 interface Props {
-    publicKey: string,
-    privateKey: string,
-    passphrase: string
+    testVal: string,
+    intArr: number[]
 }
 
-export default function ({publicKey, privateKey, passphrase}: Props) {
+export default function ({testVal, intArr}: Props) {
 
     const [input, setInput] = useState('');
     const [encrypted, setEncrypted] = useState('');
@@ -34,9 +33,9 @@ export default function ({publicKey, privateKey, passphrase}: Props) {
             <Button
                 title={"Encrypt"}
                 testID={'button'}
-                onPress={async () => {
-                    const output = await OpenPGP.encrypt(input, publicKey);
-                    setEncrypted(output);
+                onPress={() => {
+                    Encoder.encode(input);
+                    setEncrypted('Good');
                 }}
             />
             {!!encrypted && <SectionResult testID={'result'}>{encrypted}</SectionResult>}
@@ -47,13 +46,11 @@ export default function ({publicKey, privateKey, passphrase}: Props) {
                 <Button
                     title={"Decrypt"}
                     testID={'button'}
-                    onPress={async () => {
-                        const output = await OpenPGP.decrypt(
-                            encrypted,
-                            privateKey,
-                            passphrase
+                    onPress={() => {
+                        const output = Encoder.decode(
+                            intArr
                         );
-                        setDecrypted(output);
+                        setDecrypted(output.toString());
                     }}
                 />
                 {!!decrypted && (
