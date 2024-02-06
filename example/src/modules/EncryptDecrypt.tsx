@@ -34,7 +34,7 @@ export default function ({testVal, intArr}: Props) {
                 title={"Encrypt"}
                 testID={'button'}
                 onPress={() => {
-                    Encoder.encode(input);
+                    const dudu = Encoder.encode(testVal);
                     setEncrypted('Good');
                 }}
             />

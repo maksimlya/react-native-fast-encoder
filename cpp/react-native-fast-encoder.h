@@ -12,7 +12,7 @@ namespace fastEncoder {
     void cleanup();
 
     jsi::Value call(jsi::Runtime &runtime, const jsi::String &nameValue,
-                             const jsi::Object &payloadObject);
+                             const jsi::String &payloadValue);
 }
 
 #endif /* FASTOPENPGP_H */

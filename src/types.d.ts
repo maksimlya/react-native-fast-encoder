@@ -1,10 +1,3 @@
-/**
- * `Array`: returned by NativeModules due to lack of ByteArray support
- *
- * @see `FastEncoderNativeModules.callJSI`
- * @see `FastEncoderNativeModules.call`
- */
-type BridgeResponseNativeModules = Array<number>;
 
 /**
  * `ArrayBuffer`: returned only by pure JSI implementation
@@ -14,44 +7,6 @@ type BridgeResponseNativeModules = Array<number>;
  * @see `FastEncoderJSI.callSync`
  */
 type BridgeResponseJSI = ArrayBuffer | string;
-
-/**
- * Combination of all available types
- *
- * @see `BridgeResponseNativeModules`
- * @see `BridgeResponseJSI`
- */
-type BridgeResponse = BridgeResponseNativeModules | BridgeResponseJSI;
-
-/**
- * Contains all method available inside of `NativeModules`
- */
-interface FastEncoderNativeModules {
-  /**
-   * this method use `NativeModules` but also will send `JSI` reference to use same thread
-   * but it runs in a separated thread also.
-   */
-  callJSI(
-    name: string,
-    payload: Array<number>
-  ): Promise<BridgeResponseNativeModules>;
-  /**
-   * this method use `NativeModules` in a more traditional way
-   * using `JNI` on android in order to call shared a library.
-   */
-  call(
-    name: string,
-    payload: Array<number>
-  ): Promise<BridgeResponseNativeModules>;
-  /**
-   * this method will install JSI definitions
-   */
-  install(): boolean;
-}
-
-interface NativeModulesDef {
-  FastEncoder: FastEncoderNativeModules;
-}
 
 interface Global {
   BigInt: any;

@@ -1,8 +1,6 @@
 import { NativeModules } from 'react-native';
-import './shim';
 
-const FastEncoderNativeModules = (NativeModules as NativeModulesDef)
-  .FastEncoder;
+const FastEncoderNativeModules = NativeModules.FastEncoder;
 
 export default class TextEncoder {
   private static loaded = false;
@@ -12,14 +10,19 @@ export default class TextEncoder {
     message: number[]
   ) {
     this.assureJSILoaded()
-    return global.FastEncoderCallSync("decode", message);
+    const result = global.FastEncoderCallSync("decode", message);
+    return result;
   }
 
   static encode(
     data: string
   ) {
     this.assureJSILoaded()
-    return global.FastEncoderCallSync('encode', data);
+    const startTime = Date.now();
+    const result = new Uint8Array(global.FastEncoderCallSync('encode', data));
+    console.error('end ' + (Date.now() - startTime));
+    
+    return result;
   }
 
   private static assureJSILoaded() {
