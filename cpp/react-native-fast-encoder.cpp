@@ -21,7 +21,7 @@ namespace fastEncoder {
         // auto payload = payloadObject.getArrayBuffer(runtime);
         // auto size = (int) (payload.length(runtime));
         // auto data = payload.data(runtime);
-        __android_log_print(ANDROID_LOG_DEBUG, "YourTag", "Payload: %s", payload);
+        // __android_log_print(ANDROID_LOG_DEBUG, "YourTag", "Payload: %s", payload);
 
         GoResponse* response = Encode(payload);
         uint8_t *resp = static_cast<uint8_t*>(response->message);
