@@ -3,10 +3,10 @@ import { NativeModules } from 'react-native';
 const FastEncoderNativeModules = NativeModules.FastEncoder;
 
 export default class TextEncoder {
-  private static loaded = false;
-  private static TAG = '[FastEncoder]';
+  private loaded = false;
+  private TAG = '[FastEncoder]';
 
-  static decode(
+  decode(
     message: number[]
   ) {
     this.assureJSILoaded()
@@ -14,18 +14,19 @@ export default class TextEncoder {
     return result;
   }
 
-  static encode(
+  encode(
     data: string
   ) {
     this.assureJSILoaded()
     const startTime = Date.now();
-    const result = new Uint8Array(global.FastEncoderCallSync('encode', data));
-    console.error('end ' + (Date.now() - startTime));
+    const res:any = global.FastEncoderCallSync('encode', data);
+    const result = new Uint8Array(res);
+    console.log('end ' + (Date.now() - startTime));
     
     return result;
   }
 
-  private static assureJSILoaded() {
+  private assureJSILoaded() {
     if (!this.loaded) {
       this.loaded = FastEncoderNativeModules.install();
       console.log(
