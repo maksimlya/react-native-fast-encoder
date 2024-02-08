@@ -18,10 +18,8 @@ export default class TextEncoder {
     data: string
   ) {
     this.assureJSILoaded()
-    const startTime = Date.now();
     const res:any = global.FastEncoderCallSync('encode', data);
     const result = new Uint8Array(res);
-    console.log('end ' + (Date.now() - startTime));
     
     return result;
   }
