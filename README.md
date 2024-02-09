@@ -1,6 +1,4 @@
-# Implementation of Efficient Text Encoding Library in React Native
-
-This library offers significantly faster text encoding functionality compared to the default `TextEncoder` available in React Native (with 'text-encoding' library)
+# React-native-fast-encoder
 
 **Key Features:**
 
