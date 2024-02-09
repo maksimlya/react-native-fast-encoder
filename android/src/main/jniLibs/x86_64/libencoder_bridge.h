@@ -27,13 +27,14 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 typedef struct  { void* message; int size; char* error; } GoResponse;
 
 GoResponse* Encode(char*);
+char* Decode(void* ptr, int length);
 
 __attribute__((weak))
 int myFunction() {
 
 	char arr[4] = "mama";
-	void* z = (void *)(intptr_t)Encode(arr);
-	uint8_t *boss = z;
+	GoResponse* z = (void *)(intptr_t)Encode(arr);
+	uint8_t *boss = z->message;
 	printf("%d", boss[1]);
 	printf("\n");
 	return 1;
@@ -46,7 +47,7 @@ void* getArray() {
     boss[1] = 2;
     boss[2] = 3;
     boss[3] = 4;
-
+  	char* result = Decode(boss, 4);
 	return boss;
 }
 
@@ -107,7 +108,7 @@ extern "C" {
 #endif
 
 extern GoResponse* Encode(char* message);
-extern GoString Decode(GoSlice encoded);
+extern char* Decode(void* ptr, int length);
 
 #ifdef __cplusplus
 }
