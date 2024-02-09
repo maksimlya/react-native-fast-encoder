@@ -7,10 +7,10 @@ export default class TextEncoder {
   private TAG = '[FastEncoder]';
 
   decode(
-    message: number[]
+    data: Uint8Array
   ) {
     this.assureJSILoaded()
-    const result = global.FastEncoderCallSync("decode", message);
+    const result = global.FastEncoderCallSync("decode", data.buffer);
     return result;
   }
 
