@@ -7,6 +7,8 @@ import SectionTitle from "../components/SectionTitle";
 import SectionResult from "../components/SectionResult";
 import Container from "../components/Container";
 
+const enc = new Encoder();
+
 interface Props {
     testVal: string,
     intArr: number[]
@@ -34,7 +36,7 @@ export default function ({testVal, intArr}: Props) {
                 title={"Encrypt"}
                 testID={'button'}
                 onPress={() => {
-                    const dudu = Encoder.encode(testVal);
+                    window.encoded = enc.encode(testVal);
                     setEncrypted('Good');
                 }}
             />
@@ -47,8 +49,8 @@ export default function ({testVal, intArr}: Props) {
                     title={"Decrypt"}
                     testID={'button'}
                     onPress={() => {
-                        const output = Encoder.decode(
-                            intArr
+                        const output = enc.decode(
+                            window.encoded
                         );
                         setDecrypted(output.toString());
                     }}
