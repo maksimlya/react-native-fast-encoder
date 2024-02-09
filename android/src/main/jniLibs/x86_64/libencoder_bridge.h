@@ -29,27 +29,6 @@ typedef struct  { void* message; int size; char* error; } GoResponse;
 GoResponse* Encode(char*);
 char* Decode(void* ptr, int length);
 
-__attribute__((weak))
-int myFunction() {
-
-	char arr[4] = "mama";
-	GoResponse* z = (void *)(intptr_t)Encode(arr);
-	uint8_t *boss = z->message;
-	printf("%d", boss[1]);
-	printf("\n");
-	return 1;
-}
-
-__attribute__((weak))
-void* getArray() {
-	uint8_t* boss = (uint8_t*)malloc(4 * sizeof(uint8_t));
-    boss[0] = 1;
-    boss[1] = 2;
-    boss[2] = 3;
-    boss[3] = 4;
-  	char* result = Decode(boss, 4);
-	return boss;
-}
 
 #line 1 "cgo-generated-wrapper"
 
