@@ -1,5 +1,5 @@
-#ifndef FASTOPENPGP_H
-#define FASTOPENPGP_H
+#ifndef FASTENCODER_H
+#define FASTENCODER_H
 
 #include <jsi/jsilib.h>
 #include <jsi/jsi.h>
@@ -17,4 +17,4 @@ namespace fastEncoder {
                             const jsi::Object &payloadValue);
 }
 
-#endif /* FASTOPENPGP_H */
+#endif /* FASTENCODER_H */
