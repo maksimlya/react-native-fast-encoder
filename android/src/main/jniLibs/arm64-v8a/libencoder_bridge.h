@@ -20,15 +20,9 @@ typedef struct { const char *p; ptrdiff_t n; } _GoString_;
 
 
 #line 3 "main.go"
-
 #include <stdint.h>
-#include <stdio.h>
 #include <stdlib.h>
 typedef struct  { void* message; int size; char* error; } GoResponse;
-
-GoResponse* Encode(char*);
-char* Decode(void* ptr, int length);
-
 
 #line 1 "cgo-generated-wrapper"
 
@@ -87,7 +81,7 @@ extern "C" {
 #endif
 
 extern GoResponse* Encode(char* message);
-extern char* Decode(void* ptr, int length);
+extern char* Decode(void* ptr, int length, char* enc, int index, int stream);
 
 #ifdef __cplusplus
 }
