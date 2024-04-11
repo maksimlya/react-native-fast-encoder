@@ -31,7 +31,7 @@ const supportedEncodings: { [key: string]: boolean } = {
   'us-ascii': true
 }
 
-const FastEncoderNativeModules = NativeModules.FastEncoder;
+const FastEncoderNativeModules = NativeModules.FastEncoderModule;
 
 export default class TextEncoder {
   private static counter: number = 0;
@@ -63,7 +63,7 @@ export default class TextEncoder {
     this.assureJSILoaded()
     const res:any = global.FastEncoderCallSync('encode', data);
     const result = new Uint8Array(res);
-    
+
     return result;
   }
 

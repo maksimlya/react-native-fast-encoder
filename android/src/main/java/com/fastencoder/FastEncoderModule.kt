@@ -39,7 +39,7 @@ internal class FastEncoderModule(reactContext: ReactApplicationContext) :
   }
 
   override fun getName(): String {
-    return "FastEncoder"
+    return "FastEncoderModule"
   }
 
   override fun onCatalystInstanceDestroy() {
