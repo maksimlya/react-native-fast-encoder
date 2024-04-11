@@ -12,7 +12,9 @@ namespace fastEncoder {
     void cleanup();
 
     jsi::Value call(jsi::Runtime &runtime, const jsi::String &nameValue,
-                            const jsi::String &payloadValue);
+                            const jsi::Object &payloadValue,
+                            const int index,
+                            const bool stream);
     jsi::Value call(jsi::Runtime &runtime, const jsi::String &nameValue,
                             const jsi::Object &payloadValue);
 }

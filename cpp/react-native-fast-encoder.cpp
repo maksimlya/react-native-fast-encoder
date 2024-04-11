@@ -41,14 +41,17 @@ namespace fastEncoder {
     }
 
      jsi::Value call(jsi::Runtime &runtime, const jsi::String &nameValue,
-                    const jsi::Object &payloadObject) {
+                    const jsi::Object &payloadObject, const jsi::String &encValue, const int index, const bool stream) {
 
         auto data = payloadObject.getArrayBuffer(runtime);
         auto size = (int) (data.length(runtime));
 
+        auto encString = encValue.utf8(runtime);
+        auto enc = encString.c_str();
+
         uint8_t* dataArray = static_cast<uint8_t*>(data.data(runtime));
-        char* response = Decode(dataArray, size);
-        jsi::Value result = jsi::String::createFromAscii(runtime, response);
+          char* response = Decode(dataArray, size, enc, index, stream);
+        jsi::Value result = jsi::String::createFromUtf8(runtime, response);
 
         // Free memory
         free(response);
@@ -80,7 +83,10 @@ namespace fastEncoder {
                                 return response;
                         } else {
                                 auto obj = arguments[1].getObject(runtime);
-                                auto response = call(runtime, nameString, obj);
+                                auto encoding = arguments[2].getString(runtime);
+                                int index = arguments[3].getNumber();
+                                bool stream = arguments[4].getBool();
+                                auto response = call(runtime, nameString, obj, encoding, index, stream);
                                 return response;
                         }
                   

@@ -15,7 +15,7 @@ interface Global {
    * be careful if the method that you are using is a complex one like generate a new Key
    */
   FastEncoderCallSync(name: string, payload: string): BridgeResponseJSI;
-  FastEncoderCallSync(name: string, payload: ArrayBuffer): BridgeResponseJSI;
+  FastEncoderCallSync(name: string, payload: ArrayBuffer, enc: string, index: number, stream: boolean): BridgeResponseJSI;
 }
 
 declare const global: Global;
