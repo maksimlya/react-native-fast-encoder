@@ -7,7 +7,6 @@
 #include <cstring>
 #include <future>
 #include <iostream>
-#include <android/log.h>
 
 using namespace facebook;
 
