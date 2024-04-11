@@ -18,7 +18,7 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(install)
     }
     jsi::Runtime * runtime = (jsi::Runtime *)cxxBridge.runtime;
 
-    fastEncoder::install(runtime);
+    fastEncoder::install(*runtime);
     NSNumber * val = [NSNumber numberWithBool:TRUE];
     return val;
 }
