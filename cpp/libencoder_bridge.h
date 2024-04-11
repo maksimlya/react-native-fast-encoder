@@ -6,7 +6,7 @@ typedef struct { void *message; int size; char* error; } GoResponse;
 extern "C" {
 #endif
 extern GoResponse* Encode(char* p0);
-extern char* Decode(uint8_t* p0, int length);
+extern char* Decode(void* ptr, int length, char* enc, int index, int stream);
 #ifdef __cplusplus
 }
 #endif
