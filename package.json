@@ -1,6 +1,6 @@
 {
   "name": "react-native-fast-encoder",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "description": "test library for fast encode/decode",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
