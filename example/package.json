@@ -1,5 +1,5 @@
 {
-  "name": "react-native-fast-encoder-example",
+  "name": "react-native-fast-openpgp-example",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -7,11 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "build:android:debug": "cd android && ./gradlew assembleDebug --no-daemon --console=plain -PreactNativeArchitectures=arm64-v8a",
-    "build:ios:debug": "cd ios && xcodebuild -workspace FastEncoderExample.xcworkspace -scheme FastEncoderExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO"
+    "build:ios:debug": "cd ios && xcodebuild -workspace FastOpenpgpExample.xcworkspace -scheme FastOpenpgpExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO"
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.73.3",
+    "react-native": "0.73.6",
     "react-native-fs": "^2.20.0"
   },
   "devDependencies": {
