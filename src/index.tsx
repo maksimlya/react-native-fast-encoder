@@ -47,7 +47,7 @@ export default class TextEncoder {
 
   decode(
     data: Uint8Array,
-    props: props
+    props?: props
   ) {
     if(!supportedEncodings[this.encoding]) {
       console.error(`unsupported encoding! encoding: ${this.encoding}, propd: ${props}, index: ${this.index}, value: ${JSON.stringify(data)}`);
