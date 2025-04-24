@@ -7,9 +7,15 @@ buildscript {
   }
 
   dependencies {
-    classpath "com.android.tools.build:gradle:7.2.1"
+    classpath("com.android.tools.build:gradle:7.3.1")
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
   }
+}
+
+def resolveBuildType() {
+    Gradle gradle = getGradle()
+    String tskReqStr = gradle.getStartParameter().getTaskRequests()['args'].toString()
+    return tskReqStr.contains('Release') ? 'release' : 'debug'
 }
 
 def isNewArchitectureEnabled() {
@@ -19,6 +25,10 @@ def isNewArchitectureEnabled() {
 apply plugin: "com.android.library"
 apply plugin: 'kotlin-android'
 
+def reactNativeArchitectures() {
+  def value = project.getProperties().get("reactNativeArchitectures")
+  return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+}
 
 def appProject = rootProject.allprojects.find { it.plugins.hasPlugin('com.android.application') }
 
@@ -61,6 +71,10 @@ android {
   ndkVersion getExtOrDefault("ndkVersion")
   compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
 
+   buildFeatures {
+    prefab true
+  }
+
   defaultConfig {
     minSdkVersion getExtOrIntegerDefault("minSdkVersion")
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
@@ -69,7 +83,8 @@ android {
       cmake {
         cppFlags "-O2 -frtti -fexceptions -Wall -Wno-unused-variable -fstack-protector-all"
         abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
-        arguments "-DNODE_MODULES_DIR=${rootDir}/../node_modules"
+        arguments "-DANDROID_STL=c++_shared"
+        abiFilters (*reactNativeArchitectures())
       }
     }
   }
@@ -97,11 +112,21 @@ android {
 
   packagingOptions {
       pickFirst "**/libencoder_bridge.so"
+      doNotStrip resolveBuildType() == 'debug' ? "**/**/*.so" : ''
+      excludes = [
+              "META-INF",
+              "META-INF/**",
+              "**/libjsi.so",
+              "**/libreact_nativemodule_core.so",
+              "**/libturbomodulejsijni.so",
+              "**/libc++_shared.so",
+              "**/libfbjni.so"
+      ]
   }
 }
 
 repositories {
-  mavenCentral()
+  gradlePluginPortal()
   google()
 }
 

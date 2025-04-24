@@ -2,6 +2,8 @@
 #import <React/RCTBridge+Private.h>
 #import <React/RCTUtils.h>
 #include "libencoder_bridge.h"
+#import <ReactCommon/RCTTurboModule.h>
+#import <jsi/jsi.h>
 
 @implementation FastEncoderModule
 
@@ -11,14 +13,19 @@ RCT_EXPORT_MODULE()
 
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(install)
 {
-    RCTCxxBridge *cxxBridge = (RCTCxxBridge *)self.bridge;
-    if (!cxxBridge.runtime) {
-        NSNumber * val = [NSNumber numberWithBool:NO];
-        return val;
+    RCTCxxBridge *cxxBridge = (RCTCxxBridge *)_bridge;
+    if (cxxBridge == nil) {
+        return @false;
     }
-    jsi::Runtime * runtime = (jsi::Runtime *)cxxBridge.runtime;
-
-    fastEncoder::install(*runtime);
+    
+    auto jsiRuntime = (facebook::jsi::Runtime *)cxxBridge.runtime;
+    if (jsiRuntime == nil) {
+        return @false;
+    }
+    
+    auto &runtime = *jsiRuntime;
+    auto callInvoker = _bridge.jsCallInvoker;
+    fastEncoder::install(runtime, callInvoker);
     NSNumber * val = [NSNumber numberWithBool:TRUE];
     return val;
 }

@@ -2,15 +2,15 @@
 #import "react-native-fast-encoder.h"
 #endif
 
-#ifdef RCT_NEW_ARCH_ENABLED
-#import "FastEncoderModuleSpec.h"
+// #ifdef RCT_NEW_ARCH_ENABLED
+// #import "FastEncoderModuleSpec.h"
 
-@interface FastEncoderModule : NSObject <NativeFastEncoderModuleSpec>
-#else
-#import <React/RCTBridgeModule.h>
+// @interface FastEncoderModule : NSObject <NativeFastEncoderModuleSpec>
+// #else
+#import <React/RCTBridge.h>
 
 @interface FastEncoderModule : NSObject <RCTBridgeModule>
-#endif
+// #endif
 @property (nonatomic, assign) BOOL setBridgeOnMainQueue;
 
 @end
