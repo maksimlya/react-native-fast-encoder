@@ -11,16 +11,17 @@
   },
   "dependencies": {
     "react": "18.2.0",
-    "react-native": "0.73.6",
+    "react-native": "0.79.1",
     "react-native-fs": "^2.20.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@babel/preset-env": "^7.20.0",
     "@babel/runtime": "^7.20.0",
-    "@react-native/metro-config": "^0.72.11",
+    "@react-native/babel-preset": "0.79.1",
+    "@react-native/metro-config": "^0.79.1",
+    "@react-native/typescript-config": "0.79.1",
     "babel-plugin-module-resolver": "^5.0.0",
-    "metro-react-native-babel-preset": "0.76.8",
     "pod-install": "^0.1.0"
   },
   "engines": {

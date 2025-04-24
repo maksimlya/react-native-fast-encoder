@@ -1,7 +1,7 @@
-import { NativeModules } from 'react-native';
+import FastEncoderNativeModules from './NativeFastEncoderModule';
 
 interface props {
-  stream: boolean
+  stream: boolean;
 }
 
 const supportedEncodings: { [key: string]: boolean } = {
@@ -28,10 +28,8 @@ const supportedEncodings: { [key: string]: boolean } = {
   'iso-8859-14': true,
   'iso-8859-15': true,
   'iso-8859-16': true,
-  'us-ascii': true
-}
-
-const FastEncoderNativeModules = NativeModules.FastEncoderModule;
+  'us-ascii': true,
+};
 
 export default class TextEncoder {
   private static counter: number = 0;
@@ -43,25 +41,32 @@ export default class TextEncoder {
   constructor(encoding: string = 'utf-8') {
     this.index = TextEncoder.counter++;
     this.encoding = encoding.toLocaleLowerCase();
-   }
+  }
 
-  decode(
-    data: Uint8Array,
-    props?: props
-  ) {
-    if(!supportedEncodings[this.encoding]) {
-      console.error(`unsupported encoding! encoding: ${this.encoding}, propd: ${props}, index: ${this.index}, value: ${JSON.stringify(data)}`);
-     }
-    this.assureJSILoaded()
-    const result = global.FastEncoderCallSync("decode", new Uint8Array(data || []).buffer, this.encoding, this.index, !!(props && props.stream));
+  decode(data: Uint8Array, props?: props) {
+    if (!supportedEncodings[this.encoding]) {
+      console.error(
+        `unsupported encoding! encoding: ${
+          this.encoding
+        }, propd: ${props}, index: ${this.index}, value: ${JSON.stringify(
+          data
+        )}`
+      );
+    }
+    this.assureJSILoaded();
+    const result = global.FastEncoderCallSync(
+      'decode',
+      new Uint8Array(data || []).buffer,
+      this.encoding,
+      this.index,
+      !!(props && props.stream)
+    );
     return result;
   }
 
-  encode(
-    data: string
-  ) {
-    this.assureJSILoaded()
-    const res:any = global.FastEncoderCallSync('encode', data);
+  encode(data: string) {
+    this.assureJSILoaded();
+    const res: any = global.FastEncoderCallSync('encode', data);
     const result = new Uint8Array(res);
 
     return result;
