@@ -3,14 +3,12 @@
 #endif
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "generated/RNFastEncoderModuleSpec/RNFastEncoderModuleSpec.h"
-
-// @interface FastEncoderModule : NSObject <NativeFastEncoderModuleSpec>
-// #else
-#import <React/RCTBridge.h>
-
-@interface FastEncoderModule : NSObject <RCTBridgeModule>
-// #endif
+  #import "generated/RNFastEncoderModuleSpec/RNFastEncoderModuleSpec.h"
+  @interface FastEncoderModule : NSObject <NativeFastEncoderModuleSpec>
+#else
+  #import <React/RCTBridge.h>
+  @interface FastEncoderModule : NSObject <RCTBridgeModule>
+#endif
 @property (nonatomic, assign) BOOL setBridgeOnMainQueue;
 
 @end

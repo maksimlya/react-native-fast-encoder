@@ -9,7 +9,7 @@
 
 @synthesize bridge = _bridge;
 @synthesize methodQueue = _methodQueue;
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE() 
 #ifdef NEW_ARCH_ENABLED
 static facebook::jsi::Value install(facebook::jsi::Runtime& runtime,
                                   facebook::react::TurboModule& turboModule,
