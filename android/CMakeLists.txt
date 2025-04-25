@@ -1,13 +1,14 @@
 cmake_minimum_required(VERSION 3.9.0)
 
 set (CMAKE_VERBOSE_MAKEFILE ON)
-set (CMAKE_CXX_STANDARD 14)
+set (CMAKE_CXX_STANDARD 20)
 set (BUILD_DIR ${CMAKE_SOURCE_DIR}/build)
 
 add_library(encoder_bridge SHARED IMPORTED)
 
 
-file(TO_CMAKE_PATH ${NODE_MODULES_DIR} NODE_MODULES_DIR)
+find_package(ReactAndroid REQUIRED CONFIG)
+find_package(fbjni REQUIRED CONFIG)
 
 
 set_target_properties(encoder_bridge
@@ -17,7 +18,6 @@ set_target_properties(encoder_bridge
 
 add_library(fast-encoder
         SHARED
-        "${NODE_MODULES_DIR}/react-native/ReactCommon/jsi/jsi/jsi.cpp"
         ../cpp/react-native-fast-encoder.cpp
         ../cpp/react-native-fast-encoder.h
         fast-encoder-adapter.cpp
@@ -26,11 +26,13 @@ add_library(fast-encoder
 include_directories(
         fast-encoder
         PRIVATE
-        "${NODE_MODULES_DIR}/react-native/ReactCommon/jsi"
         ../cpp
 )
 
 target_link_libraries(fast-encoder
         encoder_bridge
+        fbjni::fbjni
+        ReactAndroid::jsi
+        ReactAndroid::reactnative
         android
         log)

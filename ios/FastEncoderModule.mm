@@ -9,7 +9,7 @@
 
 @synthesize bridge = _bridge;
 @synthesize methodQueue = _methodQueue;
-RCT_EXPORT_MODULE()
+RCT_EXPORT_MODULE() 
 #ifdef NEW_ARCH_ENABLED
 static facebook::jsi::Value install(facebook::jsi::Runtime& runtime,
                                   facebook::react::TurboModule& turboModule,
@@ -26,14 +26,19 @@ static facebook::jsi::Value install(facebook::jsi::Runtime& runtime,
 #else
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(install)
 {
-    RCTCxxBridge *cxxBridge = (RCTCxxBridge *)self.bridge;
-    if (!cxxBridge.runtime) {
-        NSNumber * val = [NSNumber numberWithBool:NO];
-        return val;
+    RCTCxxBridge *cxxBridge = (RCTCxxBridge *)_bridge;
+    if (cxxBridge == nil) {
+        return @false;
     }
-    jsi::Runtime * runtime = (jsi::Runtime *)cxxBridge.runtime;
-
-    fastEncoder::install(*runtime);
+    
+    auto jsiRuntime = (facebook::jsi::Runtime *)cxxBridge.runtime;
+    if (jsiRuntime == nil) {
+        return @false;
+    }
+    
+    auto &runtime = *jsiRuntime;
+    auto callInvoker = _bridge.jsCallInvoker;
+    fastEncoder::install(runtime, callInvoker);
     NSNumber * val = [NSNumber numberWithBool:TRUE];
     return val;
 }

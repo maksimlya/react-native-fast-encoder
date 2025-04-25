@@ -57,7 +57,8 @@ namespace fastEncoder {
         return result;
     }
 
-    void install(jsi::Runtime &jsiRuntime) {
+    void install(jsi::Runtime &jsiRuntime, std::shared_ptr<react::CallInvoker> invoker) {
+
         std::cout << "Initializing react-native-fast-encoder" << "\n";
 
         auto bridgeCallSync = jsi::Function::createFromHostFunction(
