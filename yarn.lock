@@ -9645,6 +9645,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-fast-encoder-example@workspace:example":
+  version: 0.0.0-use.local
+  resolution: "react-native-fast-encoder-example@workspace:example"
+  dependencies:
+    "@babel/core": ^7.20.0
+    "@babel/preset-env": ^7.20.0
+    "@babel/runtime": ^7.20.0
+    "@react-native/babel-preset": 0.79.1
+    "@react-native/metro-config": ^0.79.1
+    "@react-native/typescript-config": 0.79.1
+    babel-plugin-module-resolver: ^5.0.0
+    pod-install: ^0.1.0
+    react: 19.0.0
+    react-native: 0.79.1
+    react-native-fs: ^2.20.0
+  languageName: unknown
+  linkType: soft
+
 "react-native-fast-encoder@workspace:.":
   version: 0.0.0-use.local
   resolution: "react-native-fast-encoder@workspace:."
@@ -9673,24 +9691,6 @@ __metadata:
   peerDependencies:
     react: "*"
     react-native: "*"
-  languageName: unknown
-  linkType: soft
-
-"react-native-fast-openpgp-example@workspace:example":
-  version: 0.0.0-use.local
-  resolution: "react-native-fast-openpgp-example@workspace:example"
-  dependencies:
-    "@babel/core": ^7.20.0
-    "@babel/preset-env": ^7.20.0
-    "@babel/runtime": ^7.20.0
-    "@react-native/babel-preset": 0.79.1
-    "@react-native/metro-config": ^0.79.1
-    "@react-native/typescript-config": 0.79.1
-    babel-plugin-module-resolver: ^5.0.0
-    pod-install: ^0.1.0
-    react: 19.0.0
-    react-native: 0.79.1
-    react-native-fs: ^2.20.0
   languageName: unknown
   linkType: soft
 
