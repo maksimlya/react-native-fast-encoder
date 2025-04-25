@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  FastOpenpgpExample
+//  FastEncoderExample
 //
 
 import Foundation

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* FastOpenpgpExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FastOpenpgpExampleTests.m */; };
+		00E356F31AD99517003FC87E /* FastEncoderExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* FastEncoderExampleTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		3B5D4913BDA2AE3A22186FB8 /* libPods-FastOpenpgpExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1230E0117E9DE2D8DD5032F1 /* libPods-FastOpenpgpExample.a */; };
+		3B5D4913BDA2AE3A22186FB8 /* libPods-FastEncoderExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1230E0117E9DE2D8DD5032F1 /* libPods-FastEncoderExample.a */; };
 		56B1F0CE9807154D85656D82 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E515D92C8DBF017E81608E13 /* PrivacyInfo.xcprivacy */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		EF567F4BACF980325E57F315 /* libPods-FastOpenpgpExample-FastOpenpgpExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB483450B436E42D99A5A94 /* libPods-FastOpenpgpExample-FastOpenpgpExampleTests.a */; };
+		EF567F4BACF980325E57F315 /* libPods-FastEncoderExample-FastEncoderExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB483450B436E42D99A5A94 /* libPods-FastEncoderExample-FastEncoderExampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,28 +23,28 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = FastOpenpgpExample;
+			remoteInfo = FastEncoderExample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* FastOpenpgpExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastOpenpgpExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* FastEncoderExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FastEncoderExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* FastOpenpgpExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastOpenpgpExampleTests.m; sourceTree = "<group>"; };
-		1230E0117E9DE2D8DD5032F1 /* libPods-FastOpenpgpExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastOpenpgpExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07F961A680F5B00A75B9A /* FastOpenpgpExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastOpenpgpExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FastOpenpgpExample/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = FastOpenpgpExample/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FastOpenpgpExample/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FastOpenpgpExample/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FastOpenpgpExample/main.m; sourceTree = "<group>"; };
-		27EE61E569ED7AAA90F39A00 /* Pods-FastOpenpgpExample-FastOpenpgpExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastOpenpgpExample-FastOpenpgpExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FastOpenpgpExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8CB483450B436E42D99A5A94 /* libPods-FastOpenpgpExample-FastOpenpgpExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastOpenpgpExample-FastOpenpgpExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDD0AE930D8655D0FAE1CE8C /* Pods-FastOpenpgpExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastOpenpgpExample.debug.xcconfig"; path = "Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample.debug.xcconfig"; sourceTree = "<group>"; };
-		CA605BC3572C0338E5AAB5D4 /* Pods-FastOpenpgpExample-FastOpenpgpExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastOpenpgpExample-FastOpenpgpExampleTests.release.xcconfig"; path = "Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		E0BB24CD8AA1C2B079246AC7 /* Pods-FastOpenpgpExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastOpenpgpExample.release.xcconfig"; path = "Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample.release.xcconfig"; sourceTree = "<group>"; };
-		E515D92C8DBF017E81608E13 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = FastOpenpgpExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* FastEncoderExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FastEncoderExampleTests.m; sourceTree = "<group>"; };
+		1230E0117E9DE2D8DD5032F1 /* libPods-FastEncoderExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEncoderExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* FastEncoderExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastEncoderExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = FastEncoderExample/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = FastEncoderExample/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FastEncoderExample/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = FastEncoderExample/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FastEncoderExample/main.m; sourceTree = "<group>"; };
+		27EE61E569ED7AAA90F39A00 /* Pods-FastEncoderExample-FastEncoderExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEncoderExample-FastEncoderExampleTests.debug.xcconfig"; path = "Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = FastEncoderExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CB483450B436E42D99A5A94 /* libPods-FastEncoderExample-FastEncoderExampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FastEncoderExample-FastEncoderExampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDD0AE930D8655D0FAE1CE8C /* Pods-FastEncoderExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEncoderExample.debug.xcconfig"; path = "Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample.debug.xcconfig"; sourceTree = "<group>"; };
+		CA605BC3572C0338E5AAB5D4 /* Pods-FastEncoderExample-FastEncoderExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEncoderExample-FastEncoderExampleTests.release.xcconfig"; path = "Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		E0BB24CD8AA1C2B079246AC7 /* Pods-FastEncoderExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FastEncoderExample.release.xcconfig"; path = "Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample.release.xcconfig"; sourceTree = "<group>"; };
+		E515D92C8DBF017E81608E13 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = FastEncoderExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -53,7 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF567F4BACF980325E57F315 /* libPods-FastOpenpgpExample-FastOpenpgpExampleTests.a in Frameworks */,
+				EF567F4BACF980325E57F315 /* libPods-FastEncoderExample-FastEncoderExampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,20 +61,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B5D4913BDA2AE3A22186FB8 /* libPods-FastOpenpgpExample.a in Frameworks */,
+				3B5D4913BDA2AE3A22186FB8 /* libPods-FastEncoderExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* FastOpenpgpExampleTests */ = {
+		00E356EF1AD99517003FC87E /* FastEncoderExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* FastOpenpgpExampleTests.m */,
+				00E356F21AD99517003FC87E /* FastEncoderExampleTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = FastOpenpgpExampleTests;
+			path = FastEncoderExampleTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -85,7 +85,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* FastOpenpgpExample */ = {
+		13B07FAE1A68108700A75B9A /* FastEncoderExample */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -96,15 +96,15 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				E515D92C8DBF017E81608E13 /* PrivacyInfo.xcprivacy */,
 			);
-			name = FastOpenpgpExample;
+			name = FastEncoderExample;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				1230E0117E9DE2D8DD5032F1 /* libPods-FastOpenpgpExample.a */,
-				8CB483450B436E42D99A5A94 /* libPods-FastOpenpgpExample-FastOpenpgpExampleTests.a */,
+				1230E0117E9DE2D8DD5032F1 /* libPods-FastEncoderExample.a */,
+				8CB483450B436E42D99A5A94 /* libPods-FastEncoderExample-FastEncoderExampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,9 +119,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* FastOpenpgpExample */,
+				13B07FAE1A68108700A75B9A /* FastEncoderExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* FastOpenpgpExampleTests */,
+				00E356EF1AD99517003FC87E /* FastEncoderExampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -134,8 +134,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* FastOpenpgpExample.app */,
-				00E356EE1AD99517003FC87E /* FastOpenpgpExampleTests.xctest */,
+				13B07F961A680F5B00A75B9A /* FastEncoderExample.app */,
+				00E356EE1AD99517003FC87E /* FastEncoderExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,10 +143,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				BDD0AE930D8655D0FAE1CE8C /* Pods-FastOpenpgpExample.debug.xcconfig */,
-				E0BB24CD8AA1C2B079246AC7 /* Pods-FastOpenpgpExample.release.xcconfig */,
-				27EE61E569ED7AAA90F39A00 /* Pods-FastOpenpgpExample-FastOpenpgpExampleTests.debug.xcconfig */,
-				CA605BC3572C0338E5AAB5D4 /* Pods-FastOpenpgpExample-FastOpenpgpExampleTests.release.xcconfig */,
+				BDD0AE930D8655D0FAE1CE8C /* Pods-FastEncoderExample.debug.xcconfig */,
+				E0BB24CD8AA1C2B079246AC7 /* Pods-FastEncoderExample.release.xcconfig */,
+				27EE61E569ED7AAA90F39A00 /* Pods-FastEncoderExample-FastEncoderExampleTests.debug.xcconfig */,
+				CA605BC3572C0338E5AAB5D4 /* Pods-FastEncoderExample-FastEncoderExampleTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -154,9 +154,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* FastOpenpgpExampleTests */ = {
+		00E356ED1AD99517003FC87E /* FastEncoderExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FastOpenpgpExampleTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FastEncoderExampleTests" */;
 			buildPhases = (
 				64E26B6D3844FE6BA6B50487 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -170,14 +170,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = FastOpenpgpExampleTests;
-			productName = FastOpenpgpExampleTests;
-			productReference = 00E356EE1AD99517003FC87E /* FastOpenpgpExampleTests.xctest */;
+			name = FastEncoderExampleTests;
+			productName = FastEncoderExampleTests;
+			productReference = 00E356EE1AD99517003FC87E /* FastEncoderExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* FastOpenpgpExample */ = {
+		13B07F861A680F5B00A75B9A /* FastEncoderExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FastOpenpgpExample" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FastEncoderExample" */;
 			buildPhases = (
 				B84A0FFE47F157B0150D7E24 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -192,9 +192,9 @@
 			);
 			dependencies = (
 			);
-			name = FastOpenpgpExample;
-			productName = FastOpenpgpExample;
-			productReference = 13B07F961A680F5B00A75B9A /* FastOpenpgpExample.app */;
+			name = FastEncoderExample;
+			productName = FastEncoderExample;
+			productReference = 13B07F961A680F5B00A75B9A /* FastEncoderExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +214,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "FastOpenpgpExample" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "FastEncoderExample" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -227,8 +227,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* FastOpenpgpExample */,
-				00E356ED1AD99517003FC87E /* FastOpenpgpExampleTests */,
+				13B07F861A680F5B00A75B9A /* FastEncoderExample */,
+				00E356ED1AD99517003FC87E /* FastEncoderExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -276,15 +276,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0DBDEFE071ABC17E2A942EC1 /* [CP] Copy Pods Resources */ = {
@@ -293,15 +293,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		421E9EB6A902054D2918569B /* [CP] Copy Pods Resources */ = {
@@ -310,15 +310,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample/Pods-FastOpenpgpExample-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample/Pods-FastEncoderExample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		64E26B6D3844FE6BA6B50487 /* [CP] Check Pods Manifest.lock */ = {
@@ -336,7 +336,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FastEncoderExample-FastEncoderExampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -349,15 +349,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastOpenpgpExample-FastOpenpgpExampleTests/Pods-FastOpenpgpExample-FastOpenpgpExampleTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FastEncoderExample-FastEncoderExampleTests/Pods-FastEncoderExample-FastEncoderExampleTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B84A0FFE47F157B0150D7E24 /* [CP] Check Pods Manifest.lock */ = {
@@ -375,7 +375,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FastOpenpgpExample-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FastEncoderExample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -408,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* FastOpenpgpExampleTests.m in Sources */,
+				00E356F31AD99517003FC87E /* FastEncoderExampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +426,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* FastOpenpgpExample */;
+			target = 13B07F861A680F5B00A75B9A /* FastEncoderExample */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -434,14 +434,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 27EE61E569ED7AAA90F39A00 /* Pods-FastOpenpgpExample-FastOpenpgpExampleTests.debug.xcconfig */;
+			baseConfigurationReference = 27EE61E569ED7AAA90F39A00 /* Pods-FastEncoderExample-FastEncoderExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = FastOpenpgpExampleTests/Info.plist;
+				INFOPLIST_FILE = FastEncoderExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -455,17 +455,17 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastOpenpgpExample.app/FastOpenpgpExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastEncoderExample.app/FastEncoderExample";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA605BC3572C0338E5AAB5D4 /* Pods-FastOpenpgpExample-FastOpenpgpExampleTests.release.xcconfig */;
+			baseConfigurationReference = CA605BC3572C0338E5AAB5D4 /* Pods-FastEncoderExample-FastEncoderExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = FastOpenpgpExampleTests/Info.plist;
+				INFOPLIST_FILE = FastEncoderExampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,19 +479,19 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastOpenpgpExample.app/FastOpenpgpExample";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FastEncoderExample.app/FastEncoderExample";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDD0AE930D8655D0FAE1CE8C /* Pods-FastOpenpgpExample.debug.xcconfig */;
+			baseConfigurationReference = BDD0AE930D8655D0FAE1CE8C /* Pods-FastEncoderExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = FastOpenpgpExample/Info.plist;
+				INFOPLIST_FILE = FastEncoderExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +503,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = FastOpenpgpExample;
+				PRODUCT_NAME = FastEncoderExample;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -512,12 +512,12 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E0BB24CD8AA1C2B079246AC7 /* Pods-FastOpenpgpExample.release.xcconfig */;
+			baseConfigurationReference = E0BB24CD8AA1C2B079246AC7 /* Pods-FastEncoderExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = FastOpenpgpExample/Info.plist;
+				INFOPLIST_FILE = FastEncoderExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -529,7 +529,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = FastOpenpgpExample;
+				PRODUCT_NAME = FastEncoderExample;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -687,7 +687,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FastOpenpgpExampleTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "FastEncoderExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -696,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FastOpenpgpExample" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "FastEncoderExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -705,7 +705,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "FastOpenpgpExample" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "FastEncoderExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
