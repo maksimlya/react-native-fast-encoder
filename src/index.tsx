@@ -6,6 +6,7 @@ interface props {
   stream: boolean;
 }
 
+// @ts-ignore
 const supportedEncodings: { [key: string]: boolean } = {
   'utf-8': true,
   'windows-1250': true,
@@ -37,7 +38,6 @@ export default class TextEncoder {
   private static counter: number = 0;
   private index: number;
   private encoding: string;
-  private TAG = '[FastEncoder]';
 
   constructor(encoding: string = 'utf-8') {
     this.index = TextEncoder.counter++;
@@ -45,15 +45,6 @@ export default class TextEncoder {
   }
 
   decode(data: Uint8Array, props?: props) {
-    // if (!supportedEncodings[this.encoding]) {
-    //   console.error(
-    //     `unsupported encoding! encoding: ${
-    //       this.encoding
-    //     }, propd: ${props}, index: ${this.index}, value: ${JSON.stringify(
-    //       data
-    //     )}`
-    //   );
-    // }
     this.assureJSILoaded();
     const result = global.FastEncoderCallSync(
       'decode',
