@@ -3,7 +3,7 @@
 #endif
 
 #ifdef RCT_NEW_ARCH_ENABLED
-#import "FastEncoderModuleSpec.h"
+#import "generated/RNFastEncoderModuleSpec/RNFastEncoderModuleSpec.h"
 
 @interface FastEncoderModule : NSObject <NativeFastEncoderModuleSpec>
 #else

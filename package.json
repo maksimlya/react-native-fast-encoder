@@ -142,8 +142,13 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "commonjs",
-      "module",
+      "codegen",
+      [
+        "module",
+        {
+          "esm": true
+        }
+      ],
       [
         "typescript",
         {
@@ -153,7 +158,7 @@
     ]
   },
   "codegenConfig": {
-    "name": "RNFastTextEncoderSpec",
+    "name": "RNFastEncoderModuleSpec",
     "type": "modules",
     "jsSrcsDir": "src",
     "outputDir": {
