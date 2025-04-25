@@ -15,11 +15,11 @@ namespace fastEncoder {
                     const jsi::String &payloadObject) {
         auto payloadString = payloadObject.utf8(runtime);
         auto payloadChar = payloadString.c_str();
-         
+
         GoResponse* response = Encode(const_cast<char *>(payloadChar));
         size_t byteArraySize = response->size;
 
-        
+
         uint8_t *resp = static_cast<uint8_t*>(response->message);
 
         auto arrayBuffer = runtime.global().getPropertyAsFunction(
@@ -58,7 +58,6 @@ namespace fastEncoder {
     }
 
     void install(jsi::Runtime &jsiRuntime) {
-
         std::cout << "Initializing react-native-fast-encoder" << "\n";
 
         auto bridgeCallSync = jsi::Function::createFromHostFunction(
@@ -88,7 +87,7 @@ namespace fastEncoder {
                                 auto response = call(runtime, nameString, obj, encoding, index, stream);
                                 return response;
                         }
-                  
+
                 }
         );
         jsiRuntime.global().setProperty(jsiRuntime, "FastEncoderCallSync",

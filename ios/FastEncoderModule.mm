@@ -2,15 +2,28 @@
 #import <React/RCTBridge+Private.h>
 #import <React/RCTUtils.h>
 #include "libencoder_bridge.h"
-#import <ReactCommon/RCTTurboModule.h>
 #import <jsi/jsi.h>
 
 @implementation FastEncoderModule
+#import <React/RCTUtils.h>
 
 @synthesize bridge = _bridge;
 @synthesize methodQueue = _methodQueue;
 RCT_EXPORT_MODULE()
-
+#ifdef NEW_ARCH_ENABLED
+static facebook::jsi::Value install(facebook::jsi::Runtime& runtime,
+                                  facebook::react::TurboModule& turboModule,
+                                  const facebook::jsi::Value* args,
+                                  size_t count)
+{
+    try {
+        fastEncoder::install(runtime);
+        return jsi::Value(true);
+    } catch (const std::exception& e) {
+        return jsi::Value(false);
+    }
+}
+#else
 RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(install)
 {
     RCTCxxBridge *cxxBridge = (RCTCxxBridge *)_bridge;
@@ -29,7 +42,7 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(install)
     NSNumber * val = [NSNumber numberWithBool:TRUE];
     return val;
 }
-
+#endif
 + (BOOL)requiresMainQueueSetup {
     return YES;
 }
@@ -42,6 +55,13 @@ RCT_EXPORT_BLOCKING_SYNCHRONOUS_METHOD(install)
 
 - (void)invalidate {
     fastEncoder::cleanup();
+}
+
+
+- (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
+    (const facebook::react::ObjCTurboModule::InitParams &)params
+{
+    return std::make_shared<facebook::react::NativeFastEncoderModuleSpecJSI>(params);
 }
 
 @end
