@@ -4,10 +4,12 @@
 #include <jsi/jsilib.h>
 #include <jsi/jsi.h>
 
+#include <ReactCommon/CallInvoker.h>
+
 using namespace facebook;
 
 namespace fastEncoder {
-    void install(facebook::jsi::Runtime &jsiRuntime);
+    void install(jsi::Runtime &jsiRuntime, std::shared_ptr<react::CallInvoker> invoker);
 
     void cleanup();
 

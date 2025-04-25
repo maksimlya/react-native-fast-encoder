@@ -80,12 +80,11 @@ android {
     targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
 
     externalNativeBuild {
-      cmake {
-        cppFlags "-O2 -frtti -fexceptions -Wall -Wno-unused-variable -fstack-protector-all"
-        abiFilters "x86", "x86_64", "armeabi-v7a", "arm64-v8a"
-        arguments "-DANDROID_STL=c++_shared"
-        abiFilters (*reactNativeArchitectures())
-      }
+  cmake {
+    cppFlags "-O2 -frtti -fexceptions -Wall -Wno-unused-variable -fstack-protector-all"
+    abiFilters (*reactNativeArchitectures())
+    arguments "-DANDROID_STL=c++_shared"
+  }
     }
   }
 
@@ -120,7 +119,8 @@ android {
               "**/libreact_nativemodule_core.so",
               "**/libturbomodulejsijni.so",
               "**/libc++_shared.so",
-              "**/libfbjni.so"
+              "**/libfbjni.so",
+              "**/libreactnative.so"
       ]
   }
 }
@@ -136,7 +136,7 @@ dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
   //noinspection GradleDynamicVersion
-  implementation "com.facebook.react:react-native:+"
+  implementation 'com.facebook.react:react-native'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 

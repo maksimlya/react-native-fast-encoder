@@ -33,7 +33,6 @@ target_link_libraries(fast-encoder
         encoder_bridge
         fbjni::fbjni
         ReactAndroid::jsi
-        ReactAndroid::turbomodulejsijni
-        ReactAndroid::react_nativemodule_core
+        ReactAndroid::reactnative
         android
         log)

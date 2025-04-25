@@ -3,13 +3,13 @@ package com.fastencoder
 import android.util.Log
 import androidx.annotation.NonNull
 import com.facebook.react.bridge.*
+import com.facebook.react.turbomodule.core.CallInvokerHolderImpl
+import com.fastencoder.FastEncoderBridge
 
-internal class FastEncoderModule(reactContext: ReactApplicationContext) :
-  ReactContextBaseJavaModule(reactContext) {
+internal class FastEncoderModule(context: ReactApplicationContext?) : ReactContextBaseJavaModule(context) {
 
   val TAG = "[FastEncoderModule]"
 
-  external fun initialize(jsiPtr: Long);
   external fun destruct();
 
   companion object {
@@ -23,26 +23,17 @@ internal class FastEncoderModule(reactContext: ReactApplicationContext) :
   @ReactMethod(isBlockingSynchronousMethod = true)
   fun install(): Boolean {
     Log.d(TAG, "installing2")
-    try {
-      val contextHolder = this.reactApplicationContext.javaScriptContextHolder!!.get()
-      if (contextHolder.toInt() == 0) {
-        Log.d(TAG, "context not available")
-        return false
-      }
-      initialize(contextHolder)
+    return try {
+      FastEncoderBridge.instance.install(reactApplicationContext)
       Log.i(TAG, "successfully installed")
-      return true
+      true
     } catch (exception: java.lang.Exception) {
       Log.e(TAG, "failed to install JSI", exception)
-      return false
+      false
     }
   }
 
   override fun getName(): String {
     return "FastEncoderModule"
-  }
-
-  override fun onCatalystInstanceDestroy() {
-    destruct();
   }
 }
