@@ -1,5 +1,7 @@
 import FastEncoderNativeModules from './NativeFastEncoderModule';
 
+let jsiLoaded = false;
+
 interface props {
   stream: boolean;
 }
@@ -35,7 +37,6 @@ export default class TextEncoder {
   private static counter: number = 0;
   private index: number;
   private encoding: string;
-  private loaded = false;
   private TAG = '[FastEncoder]';
 
   constructor(encoding: string = 'utf-8') {
@@ -44,15 +45,15 @@ export default class TextEncoder {
   }
 
   decode(data: Uint8Array, props?: props) {
-    if (!supportedEncodings[this.encoding]) {
-      console.error(
-        `unsupported encoding! encoding: ${
-          this.encoding
-        }, propd: ${props}, index: ${this.index}, value: ${JSON.stringify(
-          data
-        )}`
-      );
-    }
+    // if (!supportedEncodings[this.encoding]) {
+    //   console.error(
+    //     `unsupported encoding! encoding: ${
+    //       this.encoding
+    //     }, propd: ${props}, index: ${this.index}, value: ${JSON.stringify(
+    //       data
+    //     )}`
+    //   );
+    // }
     this.assureJSILoaded();
     const result = global.FastEncoderCallSync(
       'decode',
@@ -73,14 +74,8 @@ export default class TextEncoder {
   }
 
   private assureJSILoaded() {
-    if (!this.loaded) {
-      this.loaded = FastEncoderNativeModules.install();
-      console.log(
-        this.TAG,
-        `(assureJSILoaded)`,
-        'JSI install:',
-        this.loaded ? 'Installed' : 'Not Installed'
-      );
+    if (!jsiLoaded) {
+      jsiLoaded = FastEncoderNativeModules.install();
     }
   }
 }
