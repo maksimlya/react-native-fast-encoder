@@ -82,8 +82,9 @@ android {
     externalNativeBuild {
   cmake {
     cppFlags "-O2 -frtti -fexceptions -Wall -Wno-unused-variable -fstack-protector-all"
+    arguments "-DANDROID_STL=c++_shared",
+                  "-DANDROID_SUPPORT_FLEXIBLE_PAGE_SIZES=ON"
     abiFilters (*reactNativeArchitectures())
-    arguments "-DANDROID_STL=c++_shared"
   }
     }
   }
