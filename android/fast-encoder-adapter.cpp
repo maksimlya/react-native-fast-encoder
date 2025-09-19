@@ -1,6 +1,6 @@
 #include "react-native-fast-encoder.h"
 #include <android/log.h>
-#include <libencoder_bridge.h>
+#include <encoder_bridge.h>
 #include <ReactCommon/CallInvokerHolder.h>
 #include <fbjni/fbjni.h>
 #include <jni.h>

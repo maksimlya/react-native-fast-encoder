@@ -1,7 +1,7 @@
 #import "FastEncoderModule.h"
 #import <React/RCTBridge+Private.h>
 #import <React/RCTUtils.h>
-#include "libencoder_bridge.h"
+#include "encoder_bridge.h"
 #import <jsi/jsi.h>
 
 @implementation FastEncoderModule

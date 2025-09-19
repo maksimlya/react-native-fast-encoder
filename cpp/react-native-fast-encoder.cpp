@@ -1,5 +1,5 @@
 #import "react-native-fast-encoder.h"
-#include "libencoder_bridge.h"
+#include "encoder_bridge.h"
 
 #include <iostream>
 #include <sstream>
