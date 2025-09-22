@@ -15,9 +15,9 @@
 #error This file must be compiled as Obj-C++. If you are importing it, you must change your file extension to .mm.
 #endif
 
-// Avoid multiple includes of RNFastEncoderModuleSpec symbols
-#ifndef RNFastEncoderModuleSpec_H
-#define RNFastEncoderModuleSpec_H
+// Avoid multiple includes of FastEncoderSpec symbols
+#ifndef FastEncoderSpec_H
+#define FastEncoderSpec_H
 
 #import <Foundation/Foundation.h>
 #import <RCTRequired/RCTRequired.h>
@@ -59,4 +59,4 @@ namespace facebook::react {
 } // namespace facebook::react
 
 NS_ASSUME_NONNULL_END
-#endif // RNFastEncoderModuleSpec_H
+#endif // FastEncoderSpec_H

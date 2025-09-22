@@ -11,7 +11,7 @@
  * must have a single output. More files => more genrule()s => slower builds.
  */
 
-#import "RNFastEncoderModuleSpec.h"
+#import "FastEncoderSpec.h"
 
 
 @implementation NativeFastEncoderModuleSpecBase
